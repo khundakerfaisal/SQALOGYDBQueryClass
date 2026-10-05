@@ -247,7 +247,7 @@ SELECT sp.firstname, sp.lastname, sa.departmentCode
 FROM studentPersonal sp
 CROSS JOIN studentAcademic sa;
 ```
-```Inner/left/right join ```
+```Inner/left join ```
 ``` bash
 select s.studentId,
 concat(s.firstname , ' ',s.lastname ) as Full_Name,

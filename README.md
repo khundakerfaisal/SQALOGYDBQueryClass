@@ -247,7 +247,20 @@ SELECT sp.firstname, sp.lastname, sa.departmentCode
 FROM studentPersonal sp
 CROSS JOIN studentAcademic sa;
 ```
-
+```Inner/left/right join ```
+``` bash
+select s.studentId,
+concat(s.firstname , ' ',s.lastname ) as Full_Name,
+s.city,s.bloodgroup ,s.religion ,s.Gender,
+s2.departmentCode,s2.`session`,c.subjectCode,s3.subjectTitle ,s2.totalSemesterFees,
+p.amount 
+from studentpersonal s 
+inner join studentacademic s2 on s.studentId =s2.studentId 
+left join payment p on s.studentId =p.studentId 
+inner  join courses c on s.studentId =c.studentId 
+inner join subjects s3  on c.subjectCode  =s3.subjectCode  
+where p.amount  is null
+```
 ---------------------------####---------------------- --
 
 

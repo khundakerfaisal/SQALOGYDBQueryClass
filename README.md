@@ -197,6 +197,20 @@ select avg(totalSemesterFees) from studentacademic
 select max(totalSemesterFees) from studentacademic 
 select min(totalSemesterFees) from studentacademic 
 ```
+```Subqueries```
+``` bash
+SELECT
+    sp.studentId,sp.firstname,sp.lastname,sp.city,sp.Gender
+FROM studentpersonal sp
+WHERE sp.studentId NOT IN (
+    SELECT p.studentId
+    FROM payment p
+);
+```
+
+
+
+
 ``` Case statement```
 
 ```bash

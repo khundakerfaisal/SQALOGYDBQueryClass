@@ -238,13 +238,19 @@ left join studentpersonal s2 on p.studentId =s2.studentId
 ```
 
 
-``` right join
+``` right join ```
 ``` bash
 select s.studentid,s2.firstname,s2.gender from studentacademic s 
 right join studentpersonal s2 on s.studentId =s2.studentId 
 ```
 
-
+``` Cross join ```
+``` bash
+SELECT sp.firstname, sp.lastname, sa.departmentCode
+FROM studentPersonal sp
+CROSS JOIN studentAcademic sa;
+```
+-------------------------------------------------------##----------------------------------------------------
 
 ```Inner join ```
 ``` bash
@@ -277,12 +283,7 @@ FROM studentPersonal sp
 RIGHT JOIN studentAcademic sa ON sp.studentId = sa.studentId;
 ```
 
-``` Cross join ```
-``` bash
-SELECT sp.firstname, sp.lastname, sa.departmentCode
-FROM studentPersonal sp
-CROSS JOIN studentAcademic sa;
-```
+
 ```Inner/left join ```
 ``` bash
 select s.studentId,

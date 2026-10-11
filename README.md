@@ -223,6 +223,28 @@ case
 end as fees 
 from studentacademic
 ```
+``` inner join ```
+``` bash
+select s.studentId,s.firstname ,s.lastname  from studentpersonal s 
+inner join studentacademic sa  on s.studentId   =sa.studentId  
+order by s.studentId asc
+```
+
+
+``` left join ```
+``` bash
+select p.studentid,p.amount ,s2.firstname,s2.gender from payment p
+left join studentpersonal s2 on p.studentId =s2.studentId 
+```
+
+
+``` right join
+``` bash
+select s.studentid,s2.firstname,s2.gender from studentacademic s 
+right join studentpersonal s2 on s.studentId =s2.studentId 
+```
+
+
 
 ```Inner join ```
 ``` bash
@@ -275,6 +297,8 @@ inner  join courses c on s.studentId =c.studentId
 inner join subjects s3  on c.subjectCode  =s3.subjectCode  
 where p.amount  is null
 ```
+
+
 ---------------------------####---------------------- --
 
 
